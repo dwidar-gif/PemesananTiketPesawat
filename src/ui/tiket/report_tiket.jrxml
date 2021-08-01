@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="732b9528-f02d-4ae6-bf52-e088e22eb501">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tiket.`tiket_id` AS tiket_tiket_id,
+     tiket.`maskapai_name` AS tiket_maskapai_name,
+     tiket.`maskapai_class` AS tiket_maskapai_class,
+     tiket.`destination` AS tiket_destination,
+     tiket.`price` AS tiket_price,
+     tiket.`status` AS tiket_status
+FROM
+     `tiket` tiket]]>
+	</queryString>
+	<field name="tiket_tiket_id" class="java.lang.String"/>
+	<field name="tiket_maskapai_name" class="java.lang.String"/>
+	<field name="tiket_maskapai_class" class="java.lang.String"/>
+	<field name="tiket_destination" class="java.lang.String"/>
+	<field name="tiket_price" class="java.math.BigDecimal"/>
+	<field name="tiket_status" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FFFFFF" uuid="7177a012-90d2-48d1-8654-d43d1e8779b1"/>
+				<staticText>
+					<reportElement x="136" y="24" width="418" height="32" forecolor="#333333" uuid="31f323d0-e79c-4150-8ca9-702e9623e6c5"/>
+					<textElement textAlignment="Center">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PT Primer Tour & Travel]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="136" y="56" width="418" height="20" forecolor="#666666" uuid="610a5275-c2a2-4a11-b0df-c1f32f77f9ab"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Jl. Petojo Binatu II No. 3, RT 02 / RW 08 Gambir, Jakarta Pusat]]></text>
+				</staticText>
+				<image>
+					<reportElement x="29" y="13" width="92" height="76" uuid="ca8167be-d385-4817-a7e0-226f952f2366"/>
+					<imageExpression><![CDATA[this.getClass().getResourceAsStream("/gambar/ic_logo.jpg")]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<line>
+				<reportElement x="-20" y="21" width="595" height="1" forecolor="#666666" uuid="d5f1e53d-4ea3-446f-8ccb-217cc2e623f8"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="60eddc84-846e-4bd1-ae16-d8927deb4985"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="de7247de-582c-490f-90ce-472d244b5b00"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maskapai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="667bf8c8-45e4-4c5d-8f57-b6d0322c9a00"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4b7ca04d-c783-432c-aa14-ed75fde09f25"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tujuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="368" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7118db47-b8ca-4bb1-9106-d06be66a8ecd"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="460" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="10559f57-8688-44a2-bb66-4a196aaf7acf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="25" width="555" height="1" uuid="20588b8a-796a-4b08-86b1-596a00377f5f"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="2" width="92" height="20" uuid="76654df1-f8eb-47b2-835d-24c5fe8c8ca1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiket_tiket_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="2" width="92" height="20" uuid="912dc94c-a214-42bd-a578-2fadc0c478fe"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiket_maskapai_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="184" y="2" width="92" height="20" uuid="b2c86545-6615-4c24-ab84-338b6ebaa46e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiket_maskapai_class}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="2" width="92" height="20" uuid="e1fcc5a6-d378-4e63-9328-e79b7abd7f09"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiket_destination}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="368" y="2" width="92" height="20" uuid="4e4c0b18-1e4e-487a-93b8-6bbb0af03e85"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiket_price}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="460" y="2" width="92" height="20" uuid="0861afe3-5fd5-4b3f-8022-aa50b720745f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiket_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="110">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="426" y="9" width="125" height="20" uuid="671e29d1-e501-468e-acc9-b912b30744ac"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEEE, dd MMMMM yyyy", new Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="438" y="29" width="113" height="16" uuid="77f4e303-2c6c-4f39-9107-effa041e2845"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Direktur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="83" width="113" height="16" uuid="7d60ec4d-040f-4229-ace1-12aae8daaee8"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Aldhi Ramdan]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
